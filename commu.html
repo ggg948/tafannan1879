@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نموذج التواصل والاستفسار</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+        .contact-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: auto;
+        }
+        .contact-form h2 {
+            text-align: center;
+            color: #333;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .contact-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        .contact-form button:hover {
+            background-color: #45a049;
+        }
+        .message {
+            display: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contact-form">
+        <h2>نموذج التواصل والاستفسار</h2>
+        <form id="contactForm" onsubmit="return showMessage(event)">
+            <label for="name">الاسم الكامل:</label>
+            <input type="text" id="name" name="name" required placeholder="أدخل اسمك">
+
+            <label for="email">البريد الإلكتروني:</label>
+            <input type="email" id="email" name="email" required placeholder="أدخل بريدك الإلكتروني">
+
+            <label for="message">الاستفسار أو الرسالة:</label>
+            <textarea id="message" name="message" required placeholder="اكتب استفسارك هنا..." rows="4"></textarea>
+
+            <button type="submit">إرسال</button>
+        </form>
+
+        <!-- الرسالة التي ستظهر بعد إرسال النموذج -->
+        <div id="successMessage" class="message">
+            تم إرسال استفسارك بنجاح! سنقوم بالرد عليك قريبًا.
+        </div>
+    </div>
+
+    <script>
+        // دالة لعرض الرسالة عند إرسال النموذج
+        function showMessage(event) {
+            event.preventDefault(); // منع إرسال النموذج لكي نتمكن من عرض الرسالة
+
+            // إظهار رسالة التأكيد
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // يمكن هنا إضافة الكود لإرسال البيانات إلى الخادم (مثل عبر AJAX أو POST)
+            
+            // إخفاء الرسالة بعد 5 ثوانٍ
+            setTimeout(function() {
+                document.getElementById('successMessage').style.display = 'none';
+            }, 5000);
+        }
+    </script>
+
+</body>
+</html>

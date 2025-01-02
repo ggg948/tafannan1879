@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>temo art</title>
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID&currency=USD"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ebddb8;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 1px 1px 12px wheat;
+        }
+        header h1 {
+            font-size: 2.5em;
+            color: #333;
+        }
+        
+        header h1:hover{
+           
+            color: #5f5b5b;
+        }
+        header h2:hover{
+           
+           color: #131212;
+       }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .artwork {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            width: 280px;
+            text-align: center;
+            padding: 15px;
+        }
+        .artwork img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .artwork h3 {
+            margin-top: 10px;
+            font-size: 1.5em;
+        }
+        .artwork p {
+            margin-top: 10px;
+            color: #555;
+        }
+        .price {
+            margin-top: 15px;
+            font-size: 1.2em;
+            color: #d9534f;
+        }
+        .btn-buy {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #5bc0de;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn-buy:hover {
+            background-color: #61dd50;
+        }
+        .cart {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .cart h2 {
+            text-align: center;
+        }
+        .cart-items {
+            list-style: none;
+            padding: 0;
+        }
+        .cart-items li {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+           
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>أدوات فنية</h1>
+        <h2> Temo Art market</h2>
+    </header>
+
+    <section class="gallery">
+        <div class="artwork" data-id="1" data-name="سلعه" data-price="6">
+            <img src="dafter.jpeg" alt="لوحة فنية 1">
+            <h3>مجموعة فراشي تلوين</h3>
+            <p>الوصف:مناسبة لجميع الالوان</p>
+           
+            <p class="price">سعر:6 دينار</p>
+            <button class="btn-buy">إضافة إلى السلة</button>
+            
+        </div>
+
+        <div class="artwork" data-id="2" data-name="سلعه" data-price="25">
+            <img src="kanvas10.jpeg" alt="لوحة فنية 2">
+            <h3>لوحات كانفس</h3>
+            <p>الوصف: مناسبة لجميع الالوان عدد 10 بجميع الاحجام</p>
+            <p class="price">سعر:25 دينار</p>
+            <button class="btn-buy">إضافة إلى السلة</button>
+        </div>
+
+        <div class="artwork" data-id="3" data-name="سلعه" data-price="3.5">
+            <img src="0b666c21-82ee-4ab1-b0f6-ea7d902a7135.jpeg" alt="لوحة فنية 3">
+            <h3>الوان زيتيه </h3>
+            <p>الوصف: الوان زيتيه فاخرةعدد4</p>
+            <p class="price">سعر:3.5 دينار</p>
+            <button class="btn-buy">إضافة إلى السلة</button>
+        </div>
+        <div class="artwork" data-id="3" data-name="سلعه" data-price="12">
+            <img src="Kleuren.jpeg" alt="لوحة فنية 3">
+            <h3>الوان اكريليك</h3>
+            <p>الوصف: الوان اكريليك عالي الجودة</p>
+            <p class="price">سعر:12 دينار</p>
+            <button class="btn-buy">إضافة إلى السلة</button>
+        </div>
+        <div class="artwork" data-id="3" data-name="سلعه" data-price="5">
+            <img src="My art supplies Philadelphia Cabinet_.jpeg" alt="لوحة فنية 3">
+            <h3>وسيط الالوان الزيتيه</h3>
+            <p>الوصف: وسيط عالي الجودة</p>
+            <p class="price">سعر:5 دينار</p>
+            <button class="btn-buy">إضافة إلى السلة</button>
+        </div>
+        <div class="artwork" data-id="3" data-name="سلعه" data-price="12">
+            <img src="maee.jpeg" alt="لوحة فنية 3">
+            <h3>الوان مائيه</h3>
+            <p>الوصف:الوان مائيه عالي الجودة</p>
+            <p class="price">سعر:12 دينار</p>
+            <button class="btn-buy">إضافة إلى السلة</button>
+        </div>
+        <div class="artwork" data-id="3" data-name="سلعه" data-price="4">
+            <img src="rasas.jpeg" alt="لوحة فنية 3">
+            <h3>اقلام رصاص</h3>
+            <p>الوصف: اقلام رصاص بجميع الدرجات </p>
+            <p class="price">سعر: 4 دينار </p>
+            <button class="btn-buy">إضافة إلى السلة</button>
+        </div>
+        <div class="artwork" data-id="3" data-name="سلعه" data-price="7">
+            <img src="دفتر رسم حلزوني ممتاز_ مفكرات بملف سلك عتيق مقاس….jpeg" alt="لوحة فنية 3">
+            <h3>دفتر رسم</h3>
+            <p>الوصف:دفتر رسم لجميع الالوان عدد الصفحات 200</p>
+            <p class="price">سعر:7 دينار</p>
+            <button class="btn-buy">إضافة إلى السلة</button>
+        </div>
+        <div class="artwork" data-id="3" data-name="سلعه" data-price="35">
+            <img src="stand2.jpeg" alt="لوحة فنية 3">
+            <h3>ستاند رسم كبير</h3>
+            <p>الوصف: خشب فاخر</p>
+            <p class="price">سعر:35 دينار</p>
+            <button class="btn-buy">إضافة إلى السلة</button>
+        </div>
+        <div class="artwork" data-id="3" data-name="سلعه" data-price="9">
+            <img src="kanves.jpeg" alt="لوحة فنية 3">
+            <h3>لوحات صغيره</h3>
+            <p>الوصف:لوحات صغيره بمقاس 15سم</p>
+            <p class="price">سعر:9 دينار</p>
+            <button class="btn-buy">إضافة إلى السلة</button>
+        </div>
+        <div class="artwork" data-id="3" data-name="سلعه" data-price="3">
+            <img src="8d27f866-c923-4a12-b8dc-8ef26928a58c.jpeg" alt="لوحة فنية 3">
+            <h3>فرش الوان مائيه </h3>
+            <p>الوصف: فرش الوان مائيه عالي الجودة</p>
+            <p class="price">سعر:3 دينار</p>
+            <button class="btn-buy">إضافة إلى السلة</button>
+        </div>
+        <div class="artwork" data-id="3" data-name="سلعه" data-price="30">
+            <img src="kashab.jpeg" alt="لوحة فنية 3">
+            <h3>الوان خشب</h3>
+            <p>الوصف: الوان خشب  عالي الجودة</p>
+            <p class="price">سعر:30دينار</p>
+            <button class="btn-buy">إضافة إلى السلة</button>
+        </div>
+    </section>
+
+    <section class="cart">
+        <h2>سلة الشراء</h2>
+        <ul class="cart-items">
+           
+        </ul>
+        <p id="total">المجموع: 0 دينار</p>
+
+        <div id="paypal-button-container"></div>
+    </section>
+    <!-- إضافة Stripe.js -->
+<script src="https://js.stripe.com/v3/"></script>
+
+<!-- نموذج HTML للدفع -->
+<form id="payment-form">
+  <div id="card-element"></div>
+  <button id="submit" onclick="location.href='pay.html';">دفع الآن</button>
+</form>
+
+<script>
+  var stripe = Stripe('EKAR2GH-sX46TWRQ8Wg8-XeP4CabdjfT2RWYAEgE_lrgs5qhFL5LMD7Sm66gmVRgdO7_fNfuuRf9owaW'); // استبدل بـ مفتاح Stripe الخاص بك
+  var elements = stripe.elements();
+  var card = elements.create('card');
+  card.mount('#card-element');
+
+  var form = document.getElementById('payment-form');
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    stripe.createToken(card).then(function(result) {
+      if (result.error) {
+        console.log(result.error.message);
+      } else {
+        // إرسال الرمز إلى خادمك لمعالجة الدفع
+        var token = result.token.id;
+        console.log("تم إنشاء الرمز: " + token);
+      }
+    });
+  });
+</script>
+
+    
+
+    <script>
+       
+        let cart = [];
+
+       
+        function addToCart(id, name, price) {
+            cart.push({ id, name, price });
+            updateCart();
+        }
+
+        
+        function updateCart() {
+            const cartItemsContainer = document.querySelector('.cart-items');
+            cartItemsContainer.innerHTML = '';
+
+            let total = 0;
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.innerHTML = `${item.name} - ${item.price} دينار`;
+                cartItemsContainer.appendChild(li);
+                total += item.price;
+            });
+
+            document.getElementById('total').innerText = `المجموع: ${total} دينار`;
+
+           
+            updatePaypalButton(total);
+        }
+
+       
+        const buttons = document.querySelectorAll('.btn-buy');
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const artwork = button.closest('.artwork');
+                const id = artwork.getAttribute('data-id');
+                const name = artwork.getAttribute('data-name');
+                const price = parseFloat(artwork.getAttribute('data-price'));
+                addToCart(id, name, price);
+            });
+        });
+
+        
+        function updatePaypalButton(total) {
+            if (total > 0) {
+                paypal.Buttons({
+                    createOrder: function(data, actions) {
+                        return actions.order.create({
+                            purchase_units: [{
+                                amount: {
+                                    value: total
+                                }
+                            }]
+                        });
+                    },
+                    onApprove: function(data, actions) {
+                        return actions.order.capture().then(function(details) {
+                            alert('تم الدفع بنجاح! شكراً لك.');
+                        });
+                    }
+                }).render('#paypal-button-container');
+            } else {
+                document.getElementById('paypal-button-container').innerHTML = '';
+            }
+        }
+    </script>
+
+</body>
+<footer>
+    <p>&copy; 2024 جميع الحقوق محفوظة</p>
+</footer>
+</html>
+

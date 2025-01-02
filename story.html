@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اشهر اللوحات</title>
+    <style>
+        /* إعدادات عامة */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8dbba;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-top: 50px;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        h1 :hover{
+            color: #613838;
+        }
+p{
+    font-size: 30px;
+    font-weight: bold;
+}
+        /* تنسيق الحاوية للصور */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        /* تنسيق بطاقة الصورة */
+        .card {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            height: 700px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        /* تأثير عند تمرير الفأرة فوق الصورة */
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* تنسيق الصورة داخل البطاقة */
+        .card img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            border-radius: 12px 12px 0 0;
+            transition: transform 0.5s ease;
+        }
+
+        /* تأثير عند تمرير الفأرة فوق الصورة */
+        .card:hover img {
+            transform: scale(1.1);
+        }
+
+        /* تنسيق العنوان */
+        .card h2 {
+            font-size: 22px;
+            margin: 15px 0;
+            color: #333;
+        }
+
+        /* تنسيق الفقرة الوصفية */
+        .card p {
+            font-size: 16px;
+            color: #777;
+            margin: 0 15px 15px;
+            line-height: 1.5;
+            
+        }
+
+        /* تأثير النصوص عند التمرير */
+        .card:hover h2, .card:hover p {
+            color: #1d72b8;
+        }
+
+        /* تأثير التحميل */
+        .card {
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+        }
+
+        .card:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .card:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .card:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .card:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+        .card:nth-child(5) {
+            animation-delay: 1s;
+        }
+
+        .card:nth-child(6) {
+            animation-delay: 1.2s;
+        }
+
+        .card:nth-child(7) {
+            animation-delay: 1.4s;
+        }
+
+        .card:nth-child(8) {
+            animation-delay: 1.6s;
+        }
+
+        .card:nth-child(9) {
+            animation-delay: 1.8s;
+        }
+
+        .card:nth-child(10) {
+            animation-delay: 2s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>اشهر اللوحات</h1>
+<p> قد لا تراها الاجمل لكن الحضاره والقصه هي التي حددت شهرتها </p>
+    <div class="container">
+        <!-- بطاقة 1 -->
+        <div class="card">
+            <img src="لوحة الموناليزا.jpeg" alt="صورة 1">
+            <h2> الموناليزا "دافنشي"</h2>
+            <p>اللوحة الأكثر شهرة في العالم هي تلك المرأة الغامضة ذات الابتسامة الغامضة لكن هذه واحدة من الحقائق القليلة حول هذا العمل الفني.</p>
+        </div>
+
+        <!-- بطاقة 2 -->
+        <div class="card">
+            <img src="ليله.jpeg" alt="صورة 2">
+            <h2>ليلة النجوم “فان جوخ"</h2>
+            <p>عندما كان الفنان يعيش في مصحة، في أحد الأيام التقط المشهد من نافذة غرفته، وبدأ رسم هذه اللوحة</p>
+        </div>
+
+        <!-- بطاقة 3 -->
+        <div class="card">
+            <img src="Experts Reveal Message in Da Vinci’s 'The Last Supper' - artnet News.jpeg" alt="صورة 3">
+            <h2>لوحة العشاء الأخير "دافنشي"</h2>
+            <p>هذه اللوحة الجدارية مليئة بالنظريات حول الرموز المخفية، كواحد من القطع الفنية الشهيرة</p>
+        </div>
+
+        <!-- بطاقة 4 -->
+        <div class="card">
+            <img src="Everything You Must Know About Las Meninas.jpeg" alt="صورة 4">
+            <h2>لاس مينيناس"ديغوو"</h2>
+            <p>اعتبر تعقيد وغموض العمل ومدى المعاني التي قد تستوحى من الشخصيات المرسومة وزاوايا الرسم من اكثر اسباب شهرتها </p>
+        </div>
+
+        <!-- بطاقة 5 -->
+        <div class="card">
+            <img src="koblah.jpeg" alt="صورة 5">
+            <h2>القبله"غوستاف"</h2>
+            <p>تصور اللوحة اثنين من عشاق الذهب متشابكين في عناق ودود</p>
+        </div>
+
+      
+
+        <!-- بطاقة 7 -->
+        <div class="card">
+            <img src="download (4).jpeg" alt="صورة 7">
+            <h2>غيرنيكا "بيكاسو"</h2>
+            <p>تصور القصف الجوي الألماني لمدينة جيرنيكا في منطقة الباسك خلال الحرب الأهلية الإسبانية</p>
+        </div>
+
+      
+       
+        <div class="card">
+            <img src="￼ الوصف_ تميزت اللوحة بأسلوب فني مميز، حيث استخدم….jpeg" alt="صورة 9">
+            <h2>لوحة الصرخة "مونش"</h2>
+            <p>واحدة من أهم اللوحات الشهيرة هي لوحة الصرخةوتصور رجلًا في حالة من الرعب والصراخ في جميع أنحاء اللوحة</p>
+        </div>
+        <div class="card">
+            <img src="قرط.jpeg" alt="صورة 9">
+            <h2>الوحة الفتاه ذات قرط اللؤلؤ</h2>
+            <p>رسم يوهانس فيرمير صورة توضيحية لامرأة شابة تجلس أمام خلفية داكنة وأشهر ما في هذه اللوحة أنها تصور نعومة وجه الفتاة الجميلة وبريق الضوء على شفتيها</p>
+        </div>
+
+       
+    </div>
+
+</body>
+</html>
+
+
+ 
+
+
